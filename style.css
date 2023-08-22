@@ -17,12 +17,33 @@ header {
 }
 
 header .logo {
+  width: 25vw;
   max-width: 50%;
 }
 header h1 {
   color: #555151;
   text-transform: uppercase;
   font-size: 4vw;
+  letter-spacing: 0.5vw;
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  header .logo {
+    width: 28vw;
+    max-width: 70%;
+  }
+  header h1 {
+    font-size: 4.5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .logo {
+    width: 35vw;
+    max-width: 80%;
+  }
+  header h1 {
+    font-size: 5.5vw;
+  }
 }
 
 /* Hero */
@@ -30,10 +51,13 @@ header h1 {
   display: flex;
   font-family: "Poppins", sans-serif;
 }
-.hero img {
-  /* width: 50%; */
-  height: 30vw;
-  object-fit: contain;
+.hero .logo {
+  width: 40%;
+}
+.hero .logo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .hero .hero-right {
   flex: 1;
@@ -60,15 +84,43 @@ header h1 {
   font-weight: 500;
   font-size: 2.5vw;
 }
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .hero .hero-right h2 {
+    font-size: 4.5vw;
+  }
+  .hero .hero-right h1 {
+    font-size: 5.5vw;
+  }
 
+  .hero .hero-right span {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero .logo {
+    width: 45%;
+  }
+
+  .hero .hero-right h2 {
+    font-size: 5.5vw;
+  }
+  .hero .hero-right h1 {
+    font-size: 6.5vw;
+  }
+
+  .hero .hero-right span {
+    font-size: 4.5vw;
+  }
+}
 /* Visit Us Banner */
 .visit-us {
-  padding: 1vw;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5vw;
+  gap: 1vw;
   text-align: center;
   font-family: "Poppins", sans-serif;
 
@@ -97,6 +149,40 @@ header h1 {
   padding: 1vw 1.5vw;
 }
 
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .visit-us {
+    background-position-x: -5vw;
+    background-position-y: 4vw;
+  }
+  .visit-us h2 {
+    font-size: 3.5vw;
+  }
+  .visit-us p {
+    font-size: 2.8vw;
+  }
+  .visit-us button {
+    font-size: 2.8vw;
+    padding: 1.5vw 2vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .visit-us {
+    background-position-x: -12vw;
+    background-position-y: 4vw;
+  }
+  .visit-us h2 {
+    font-size: 4.5vw;
+  }
+  .visit-us p {
+    font-size: 3.8vw;
+  }
+  .visit-us button {
+    font-size: 3.8vw;
+    padding: 2vw 3vw;
+  }
+}
+
 /* Cards */
 .cards-heading {
   text-transform: uppercase;
@@ -108,19 +194,24 @@ header h1 {
   font-family: "Poppins", sans-serif;
 }
 .cards {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: stretch;
   gap: 1vw;
-  /* border:2px solid red; */
   padding: 0 2vw;
+}
+.advertising-cost {
+  position: absolute;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 600;
+  bottom: 9vw;
 }
 .card {
   flex: 1;
-  /* align-self: stretch; */
   display: flex;
   flex-direction: column;
-  /* border:2px solid red; */
   justify-content: space-between;
   gap: 1vw;
 }
@@ -138,15 +229,19 @@ header h1 {
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  gap: 1vw;
-  padding: 0.5vw 2vw;
+  gap: 2vw;
+  padding: 0.5vw 3vw;
 }
 
 .card ul li {
   font-size: 2vw;
+  text-align: center;
+
   font-family: "PT Sans Narrow", sans-serif;
 }
 .cards .card button {
+  /* position: relative; */
+  margin-top: 5vw;
   border: none;
   border-radius: 15px;
   -webkit-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.52);
@@ -173,6 +268,73 @@ header h1 {
   background-color: #847aac;
 }
 
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .cards-heading {
+    font-size: 3.5vw;
+  }
+  .cards {
+    gap: 2vw;
+  }
+  .advertising-cost {
+    font-size: 2vw;
+    bottom: 13vw;
+  }
+  .card {
+    flex: 1;
+  }
+
+  .card h1 {
+    font-size: 3.3vw;
+  }
+  .card ul {
+    padding: 0.5vw 5vw;
+  }
+  .card ul li {
+    font-size: 3.2vw;
+  }
+  .cards .card button {
+    padding: 1.5vw 1.8vw;
+    font-size: 3vw;
+    -webkit-box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.52);
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.52);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cards-heading {
+    font-size: 4.3vw;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 6vw;
+    padding: 3vw;
+  }
+  .advertising-cost {
+    display: none;
+  }
+
+  .card {
+    gap: 2vw;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .card h1 {
+    font-size: 4.8vw;
+  }
+  .card ul {
+    padding: 0.5vw 8vw;
+  }
+  .card ul li {
+    font-size: 4.2vw;
+  }
+  .cards .card button {
+    box-shadow: none;
+    padding: 1.5vw 1.8vw;
+    font-size: 4.2vw;
+  }
+}
+
 /* Booking */
 .booking {
   display: grid;
@@ -184,7 +346,7 @@ header h1 {
   background-color: #e7e7e7;
   border: none;
   border-radius: 50px;
-  height: 5px;
+  height: 0.5vw;
   width: 40%;
 }
 .booking h1 {
@@ -193,18 +355,48 @@ header h1 {
   font-family: "Pridi", serif;
 }
 .booking h1:nth-child(3) {
-  letter-spacing: 5px;
+  letter-spacing: 2vw;
 }
 .booking button {
   cursor: pointer;
   background-color: #2980cd;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 50px;
   padding: 0.5vw 1vw;
   color: #fff;
   text-transform: capitalize;
   font-size: 2vw;
   font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .booking {
+    padding: 4vw 3vw;
+  }
+  .booking hr {
+    height: 0.7vw;
+  }
+  .booking h1 {
+    font-size: 4.5vw;
+  }
+
+  .booking button {
+    padding: 1vw 2vw;
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .booking {
+    padding: 3vw;
+  }
+
+  .booking h1 {
+    font-size: 5.5vw;
+  }
+
+  .booking button {
+    padding: 1.5vw 2.8vw;
+    font-size: 4vw;
+  }
 }
 
 /* Footer */
@@ -220,20 +412,56 @@ footer {
   align-items: center;
   text-align: center;
 }
+footer h1 {
+  font-size: 3.2vw;
+}
 footer .social-media-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2vw;
+  gap: 4vw;
 }
 footer .social-media-links a {
   color: #b8b8b8;
-  font-size: 3vw;
+  font-size: 4vw;
+}
+footer .social-media-links a:hover {
+  color: black;
 }
 footer p {
   font-size: 1.5vw;
 }
-footer p:nth-of-type(2){
+footer p:nth-of-type(2) {
   color: #b8b8b8;
+}
 
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  footer h1 {
+    font-size: 4.5vw;
+  }
+  footer .social-media-links {
+    gap: 4vw;
+  }
+  footer .social-media-links a {
+    color: #b8b8b8;
+    font-size: 6vw;
+  }
+
+  footer p {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer h1 {
+    font-size: 5.5vw;
+  }
+
+  footer .social-media-links a {
+    color: #b8b8b8;
+    font-size: 7vw;
+  }
+
+  footer p {
+    font-size: 4vw;
+  }
 }
