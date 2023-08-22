@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  padding: 2vw;
+  background-color: #ffc66e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+header .logo {
+  max-width: 50%;
+}
+header h1 {
+  color: #555151;
+  text-transform: uppercase;
+  font-size: 4vw;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+.hero img {
+  /* width: 50%; */
+  height: 30vw;
+  object-fit: contain;
+}
+.hero .hero-right {
+  flex: 1;
+  background-color: #fcdccb;
+  padding: 4vw 2vw;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1vw;
+}
+.hero .hero-right h2 {
+  color: rgb(218, 9, 9);
+  font-size: 3.5vw;
+  font-weight: 800;
+}
+.hero .hero-right h1 {
+  font-size: 5vw;
+  font-weight: 900;
+}
+
+.hero .hero-right span {
+  font-weight: 500;
+  font-size: 2.5vw;
+}
+
+/* Visit Us Banner */
+.visit-us {
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+
+  color: white;
+  background-color: #f1b901;
+  background-image: url("./assets/visit.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.visit-us h2 {
+  font-size: 2.5vw;
+}
+
+.visit-us p {
+  font-size: 1.8vw;
+}
+.visit-us button {
+  font-size: 1.8vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #000;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  padding: 1vw 1.5vw;
+}
+
+/* Cards */
+.cards-heading {
+  text-transform: uppercase;
+  font-size: 3vw;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  text-align: center;
+  margin: 2vw;
+  font-family: "Poppins", sans-serif;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1vw;
+  /* border:2px solid red; */
+  padding: 0 2vw;
+}
+.card {
+  flex: 1;
+  /* align-self: stretch; */
+  display: flex;
+  flex-direction: column;
+  /* border:2px solid red; */
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.card h1 {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 2.3vw;
+}
+.card ul {
+  flex: 1;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  padding: 0.5vw 2vw;
+}
+
+.card ul li {
+  font-size: 2vw;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.cards .card button {
+  border: none;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.52);
+  width: 90%;
+  color: white;
+  padding: 0.8vw 1.3vw;
+  font-size: 2vw;
+  font-weight: 600;
+  font-family: "PT Sans Narrow", sans-serif;
+
+  text-transform: capitalize;
+  align-self: center;
+}
+
+.cards .card:nth-child(1) button {
+  background-color: #ffd900;
+}
+.cards .card:nth-child(2) button {
+  background-color: #f68365;
+}
+.cards .card:nth-child(3) button {
+  background-color: #847aac;
+}
+
+/* Booking */
+.booking {
+  display: grid;
+  gap: 1vw;
+  place-items: center;
+  padding: 2vw 3vw;
+}
+.booking hr {
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 50px;
+  height: 5px;
+  width: 40%;
+}
+.booking h1 {
+  font-size: 3.3vw;
+  text-transform: capitalize;
+  font-family: "Pridi", serif;
+}
+.booking h1:nth-child(3) {
+  letter-spacing: 5px;
+}
+.booking button {
+  cursor: pointer;
+  background-color: #2980cd;
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 0.5vw 1vw;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 2vw;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Footer */
+footer {
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+  padding: 2vw;
+  margin: 0 4vw;
+  display: flex;
+  gap: 2vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+footer .social-media-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+footer .social-media-links a {
+  color: #b8b8b8;
+  font-size: 3vw;
+}
+footer p {
+  font-size: 1.5vw;
+}
+footer p:nth-of-type(2){
+  color: #b8b8b8;
+
+}
